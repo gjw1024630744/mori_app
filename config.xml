@@ -1,24 +1,24 @@
- <widget id="A6043965560059"  version="0.0.1">
+<widget id="A6043965560059" version="0.0.1">
 
-    <name>反弹密室大逃脱</name>
+	<name>反弹密室大逃脱</name>
 
-    <description>
+	<description>
 
         Example For APICloud.
 
-    </description>
+	</description>
 
-    <author email="developer@apicloud.com" href="http://www.apicloud.com">
+	<author email="developer@apicloud.com" href="http://www.apicloud.com">
 
         Developer
 
-    </author>
+	</author>
 
-    <content src="index.html" />
+	<content src="index.html" />
 
-    <access origin="*" />
+	<access origin="*" />
 
-    <preference name="pageBounce" value="false"/>
+	<preference name="pageBounce" value="false"/>
 
 	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
 
@@ -58,13 +58,13 @@
 
 	<permission name="hardware" />
 
-  <preference name="backgroundMode" value="audio"/>
+	<preference name="backgroundMode" value="audio"/>
 
-  <preference name="android_abi" value="arm64-v8a"/>
-  
-  <feature name="ajpush">
-      <param name="app_key" value="076cb6da58cb1fc632201e77" />
-      <param name="channel" value="likun_131@sina.coms" />
-  </feature>
+	<preference name="android_abi" value="arm64-v8a"/>
+
+	<feature name="ajpush">
+		<param name="app_key" value="076cb6da58cb1fc632201e77" />
+		<param name="channel" value="likun_131@sina.coms" />
+	</feature>
 
 </widget>
