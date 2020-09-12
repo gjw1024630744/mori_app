@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>反弹密室大逃脱</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+</head>
+
+<body class="wrap">
+    <header>APICloud</header>
+    <section class="flex-1">
+    </section>
+    <footer>Copyright &copy;<span id="year"></span></footer>
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript">
+apiready = function () {
+  var orientationSensor = api.require("orientationSensor");
+      orientationSensor.startListener({ type: 1 }, function (ret) {
+        alert(JSON.stringify(ret))
+        // _this.orientationSensor = Math.round(360 - ret.x);
+      });
+        // api.addEventListener({
+      	// 	name: 'keyback'
+      	// }, function(ret, err){
+        //     api.toast({
+        // 			msg: '按了退出键',
+        // 			duration:2000,
+        // 			location: 'bottom'
+        // 		});
+        // })
+  // var simInfoImp = api.require('simInfoImp');
+  // simInfoImp.getSimSerialNumber(function(ret) {
+  //     alert(JSON.stringify(ret));
+  // });
+    // var androidNfc= api.require('androidNfc');
+    // api.setScreenOrientation({
+    //     orientation: 'auto_landscape'
+    // });
+    // androidNfc.nfcGetId(function( ret, err ){
+    //     if (ret.status) {
+    //         console.log(JSON.stringify(ret));
+    //         alert(JSON.stringify("读取的卡号：" + ret.cardId));
+    //     } else {
+    //         console.log(JSON.stringify(err));
+    //         alert(JSON.stringify("错误信息：" + err.msg));
+    //     }
+    // });
+    // var photoBrowser = api.require("photoBrowser");
+    // photoBrowser.open(
+    //   {
+    //     images: ['http://www.apicloud.com/start_page_h/be/fe/befebc0c1a93c060c2c7774ebd3f6e3b.png'],
+    //     bgColor: "#000",
+    //   },
+    //   function (ret, err) {
+    //     if (ret) {
+    //       if(ret.eventType == 'click'){
+    //         photoBrowser.close()
+    //       }
+    //       // alert(JSON.stringify(ret));
+    //     } else {
+    //       alert(JSON.stringify(err));
+    //     }
+    //   }
+    // );
+    api.openFrame({
+        name: 'main',
+        url: 'html/main.html',
+        bounces: true,
+    });
+    // function jpushListener(ret){
+    //   api.confirm( {
+    //     title: 'ret',
+    //     msg: ret,
+    //     buttons: [ '确定  ', '取消' ]
+    //   }, function ( ret, err ) {
+    //   } )
+    // }
+    var ajpush = api.require('ajpush');
+    ajpush.init(function(ret) {
+        // ajpush.setListener(jpushListener);
+    });
+};
+</script>
+
+</html>
